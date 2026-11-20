@@ -1,0 +1,43 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editors / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Cursor
+.cursor/
+
+# Logs & temp
+*.log
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Composer / Node (als later gebruikt)
+/vendor/
+/node_modules/
+composer.lock
+package-lock.json
+
+# Archives
+*.zip
+*.rar
+*.7z
+
+# PHP
+*.php~
+
+# Optional local overrides
+**/app/config/database.local.php

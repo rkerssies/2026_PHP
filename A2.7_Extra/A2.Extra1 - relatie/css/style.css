@@ -1,0 +1,329 @@
+/* Eén klein opmaakbestand voor de drie demopagina’s. */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: #243042;
+    background: #f1f4f8;
+    font: 17px/1.6 Arial, sans-serif;
+}
+
+header,
+main,
+footer {
+    width: 100%;
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+}
+
+header,
+footer {
+    flex: 0 0 auto;
+}
+
+main {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.title-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.title-row h1 {
+    margin: 0;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+a.account-button {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 2;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 6px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: #125ca4;
+    color: white;
+    font-size: 13px;
+    line-height: 1;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+a.account-button .account-icon {
+    display: block;
+    width: 1em;
+    height: 1em;
+    flex: 0 0 auto;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+article {
+    flex: 1 1 auto;
+    width: 100%;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 24px;
+    background: white;
+    border-radius: 8px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #125ca4;
+}
+
+article > h2,
+article > p,
+article > ul,
+article > ol,
+article > pre {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+h2,
+h3 {
+    line-height: 1.3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 8px;
+    border: 1px solid #ccd4df;
+    text-align: left;
+}
+
+thead {
+    background: #eef3fa;
+}
+
+form {
+    max-width: 440px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+}
+
+input {
+    width: 100%;
+    padding: 4px 8px;
+    border: 1px solid #8795a8;
+    border-radius: 4px;
+    font: inherit;
+    line-height: 1.2;
+}
+
+button {
+    margin-top: 16px;
+    padding: 10px 16px;
+    border: 0;
+    border-radius: 4px;
+    background: #125ca4;
+    color: white;
+    font: inherit;
+    cursor: pointer;
+}
+
+.message {
+    padding: 12px;
+    background: #edf4fc;
+    border-left: 4px solid #125ca4;
+}
+
+pre {
+    padding: 16px;
+    background: #f1f4f8;
+    overflow-x: auto;
+    font-size: 14px;
+}
+
+code {
+    font-family: monospace;
+}
+
+summary {
+    cursor: pointer;
+}
+
+footer {
+    font-size: 14px;
+}
+
+.fruit-table-wrapper {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.fruit-table-wrapper table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.fruit-table-wrapper thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: #eef3fa;
+}
+
+.fruit-table-wrapper th,
+.fruit-table-wrapper td {
+    padding: 2px 6px;
+    font-size: 13px;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+a.sort-arrow {
+    margin-left: 4px;
+    color: #125ca4;
+    font-size: 12px;
+    line-height: 1;
+    text-decoration: none;
+}
+
+a.back-button {
+    display: inline-block;
+    margin: 0;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: #125ca4;
+    color: white;
+    font-size: 13px;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+a.view-button {
+    display: inline-block;
+    margin: 0;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: #6b7280;
+    color: white;
+    font-size: 13px;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+a.add-button {
+    display: inline-block;
+    margin: 0;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: #0f7b4c;
+    color: white;
+    font-size: 13px;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+button.add-button {
+    background: #0f7b4c;
+}
+
+a.update-button {
+    display: inline-block;
+    margin: 0;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: #125ca4;
+    color: white;
+    font-size: 13px;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+a.delete-button {
+    display: inline-block;
+    margin: 0;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: #b42318;
+    color: white;
+    font-size: 13px;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+article > ul {
+    margin: 0.4em 0 0.6em;
+}
+
+.page-note {
+    margin-top: auto;
+    padding-top: 8px;
+    color: #5c6b7a;
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+.page-note p {
+    margin: 0;
+}
+
+.page-note pre {
+    margin: 4px 0;
+    padding: 0;
+    background: transparent;
+    font-size: 12px;
+}
+
+.fruit-table-wrapper .id,
+.fruit-table-wrapper .price,
+.fruit-table-wrapper .description,
+.fruit-table-wrapper .is_available,
+.fruit-table-wrapper .harvested_on {
+    display: none;
+}

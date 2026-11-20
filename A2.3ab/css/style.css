@@ -1,0 +1,12 @@
+body {
+    background-color: gainsboro;
+}
+
+article {
+    background-color: lightblue;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.foot {
+    background-color: bisque;
+}

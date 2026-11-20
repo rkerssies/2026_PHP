@@ -1,0 +1,45 @@
+A2.3 — PHP-schooldemo’s
+
+1. Pak de ZIP uit. Plaats de map A2.2-php-demos in htdocs van XAMPP.
+   Bij MAMP gebruik je de ingestelde document-root.
+2. Start Apache. Start voor de databasedemo ook MySQL.
+3. Open http://localhost/A2.2-php-demos/A2.2a-combi-basics.php
+   Bij MAMP kan localhost een poortnummer nodig hebben, bijvoorbeeld :8888.
+4. Gebruik het menu om de drie demopagina’s te openen.
+
+De drie hoofdbestanden:
+- A2.2a-combi-basics.php: fruitboxbestelling met POST, arrays, rekenen, if en loops.
+- A2.2b-url-pages.php: controller-menu via de querystring en een externe functie.
+- A2.2cd-databases.php: phpMyAdmin-uitleg en SQL-demo’s; geen PHP-databaseverbinding.
+
+Ondersteunende bestanden:
+- css/style.css: minimale gezamenlijke opmaak.
+- app/lib/trigger.php: functiedefinitie, geladen met include_once.
+- app/controllers/home.php, about.php en contact.php: HTML-fragmenten met return.
+- sql/fruits.sql: database school_fruits, tabel fruits en 50 fruitsoorten.
+
+Opbouw:
+PHP-logica staat vóór de doctype. Alle dynamische uitvoer staat binnen article.
+Korte echo-tags renderen variabelen, ook in de value-attributen van formuliervelden.
+De controllerbestanden retourneren HTML en hebben daarom geen eigen doctype.
+Variabelen en databasekolommen hebben Engelse namen; uitleg en labels zijn Nederlands.
+
+Combi testen:
+- Eerste bezoek: formulier en uitleg, nog geen bestelling.
+- Sam / 8000AA / 3: subtotaal 6,30; korting 1,00; totaal 5,30.
+- Sam / 8000AB / 3: geen korting; locatie B; totaal 6,30.
+- Leeg veld: melding; geen berekening.
+- Aantal abc of 11: melding; geen berekening.
+- HTML in de naam: wordt als tekst getoond.
+
+Router testen:
+- Zonder querystring of ?controller=home: Home.
+- ?controller=about: Over de opleiding.
+- ?controller=contact: Contact.
+- ?controller=unknown: melding en HTTP-status 404.
+
+Databasedemo:
+Importeer fruits.sql één keer in een nieuwe oefendatabase.
+Het bestand verwijdert geen tabellen. Bestaat fruits al, dan stopt CREATE TABLE.
+SELECT COUNT(*) AS total FROM fruits; geeft na de import 50.
+Sweetness en season zijn indicatieve, vereenvoudigde lesdata.

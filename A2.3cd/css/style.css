@@ -1,0 +1,27 @@
+body {
+    background-color: gainsboro;
+}
+
+article {
+    background-color: lightblue;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.foot {
+    background-color: bisque;
+}
+
+.title-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.title-row h1 {
+    margin: 0;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
